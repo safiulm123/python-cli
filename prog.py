@@ -16,7 +16,6 @@ parser.add_argument("--JsonFile",help="Provide the link for JSON File")
 
 args = parser.parse_args()
 
-if args.channel & args.JsonFile :
-    print(args.channel)
-    print(args.JsonFile)
-
+if args.channel:
+    if args.JsonFile:
+        print(args.channel + args.JsonFile)
